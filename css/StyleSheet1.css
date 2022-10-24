@@ -1,0 +1,36 @@
+﻿*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+.head {
+    margin: 20px auto;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    width: fit-content;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px #111;
+    position: relative;    
+}
+
+.head::before {
+    content: attr(data-text);
+    -webkit-text-fill-color: #ff00f2;
+    transition: 0.5s;
+    overflow: hidden;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+
+.head:hover::before {
+    width: 100%;
+}
